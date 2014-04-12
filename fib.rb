@@ -2,11 +2,12 @@
 # i feel like im stuck thinking in python
 
 def r_fib(n)
-  #if n == 1 || n == 2
-  #  return 1
   return n if (0..1).include? n
-  return r_fib(n - 1) + r_fib(n - 2)
+  (r_fib(n - 1) + r_fib(n - 2))
 end
+
+# black magic. lambda function + ternary operator + block.
+magic = ->(x){ x < 2 ? x : magic[x-1] + magic[x-2] }
 
 def loop_fib(n)
   a, b = 0, 1
@@ -20,4 +21,5 @@ end
 if __FILE__ == $0
   puts r_fib(10)
   puts loop_fib(10)
+  puts magic[10]
 end
