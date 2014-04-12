@@ -1,7 +1,7 @@
 
 # this doesn't seem pretty...there's gotta prettier way.
 def r_fib(n)
-  if n == 1 or n == 2
+  if n == 1 || n == 2
     return 1
   end
   return r_fib(n - 1) + r_fib(n - 2)
