@@ -17,10 +17,8 @@ magic = ->(x){ x < 2 ? x : magic[x-1] + magic[x-2] }
 
 def loop_fib(n)
   a, b = 0, 1
-  0.upto(n - 1) do 
-    a, b = b, a+b
-  end
-  return a
+  0.upto(n - 1) { a, b = b, a+b }
+  a
 end
 
 # apparently, this isn't a good design pattern either.
