@@ -2,8 +2,14 @@
 # i feel like im stuck thinking in python
 
 def r_fib(n)
-  return n if (0..1).include? n
+  return n if n <= 1
   (r_fib(n - 1) + r_fib(n - 2))
+end
+
+# ternary op. if n is less than or equal to 1, return 1, otherwise
+# return recurive calls.
+def r_fib2(n)
+  n <= 1 ? n : r_fib2(n - 1) + fib(n - 2)
 end
 
 # black magic. lambda function + ternary operator + block.
@@ -22,4 +28,5 @@ if __FILE__ == $0
   puts r_fib(10)
   puts loop_fib(10)
   puts magic[10]
+  puts r_fib(10)
 end
