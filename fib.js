@@ -8,8 +8,13 @@ r_fib = function(n) {
   }
 }
 
+r_fib2 = function(n) {
+  result = n <= 1 ? n : r_fib2(n - 1) + r_fib2(n - 2);
+}
+
 
 console.log(r_fib(10));
+console.log(r_fib2(10));
 
 /* there isn't a clean way to do if __name__ == "__main__":..
  * unless doing:
